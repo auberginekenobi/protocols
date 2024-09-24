@@ -14,9 +14,9 @@ This tutorial was written and tested on Mac OS 13.5 and Ubuntu 16. Similar resul
 
 ## Tutorial
 0. Open a command line prompt.[^1] 
-1. [Download](https://docs.anaconda.com/free/miniconda/index.html) and run the miniconda[^2] installer corresponding to your operating system. Accept the EULA, install in default location, and let conda modify your `.bashrc`[^3], `$PATH`[^4], and environment variables.
+1. [Download](https://github.com/conda-forge/miniforge) and run the miniforge[^2] installer corresponding to your operating system. Accept the EULA, install in default location, and let conda modify your `.bashrc`[^3], `$PATH`[^4], and environment variables.
    ```
-   wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+   wget https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-MacOSX-arm64.sh # or the equivalent installer for your OS
    bash Miniconda3-latest-Linux-x86_64.sh
    ```
 2. Add `conda` to `$PATH`.
@@ -35,13 +35,7 @@ This tutorial was written and tested on Mac OS 13.5 and Ubuntu 16. Similar resul
    conda config --set channel_priority strict
    ```
    [^5] 
-5. We will now install our first package. The `mamba` dependency solver is an open-source improvement on base conda. 
-   ```
-   # Install the `mamba` dependency solver and set it to default.
-   conda install --name base conda-libmamba-solver --yes
-   conda config --set solver libmamba
-   ```
-6. The `jupyter` project is a long-running effort to provide interoperability between data science languages Python and R.[^6]
+5. The `jupyter` project is a long-running effort to provide interoperability between data science languages Python and R.[^6]
    ```
    conda install jupyter
    ```
@@ -49,7 +43,7 @@ This tutorial was written and tested on Mac OS 13.5 and Ubuntu 16. Similar resul
    You have just set up your *base environment*, the minimal software necessary to install and run other conda packages. Best practice is to keep only 
    a minimal installation of conda here, and to create a new environment for each of your common use cases. Let's do that next.
 
-7. My basic data analysis toolbox uses Python 3 and a few common packages:
+6. My basic data analysis toolbox uses Python 3 and a few common packages:
    ```
    # create a new conda environment named "py3"
    conda create --name py3
@@ -58,7 +52,7 @@ This tutorial was written and tested on Mac OS 13.5 and Ubuntu 16. Similar resul
    conda activate py3
 
    # install data analysis tools
-   conda install python numpy pandas scipy statsmodels scikit-learn --yes
+   conda install python numpy pandas scipy statsmodels scikit-learn openpyxl --yes
 
    # data visualization tools
    conda install matplotlib seaborn --yes
