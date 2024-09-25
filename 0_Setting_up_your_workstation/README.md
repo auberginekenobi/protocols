@@ -35,7 +35,7 @@ This tutorial was written and tested on Mac OS 13.5 and Ubuntu 16. Similar resul
    conda config --set channel_priority strict
    ```
    [^5] 
-5. The `jupyter` project is a long-running effort to provide interoperability between data science languages Python and R.[^6]
+5. The `jupyter` project is a long-running effort to provide an interactive user interface for data science languages Python and R.[^6]
    ```
    conda install jupyter
    ```
