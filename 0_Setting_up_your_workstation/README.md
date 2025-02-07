@@ -17,7 +17,7 @@ This tutorial was written and tested on Mac OS 13.5 and Ubuntu 16. Similar resul
 1. [Download](https://github.com/conda-forge/miniforge) and run the miniforge[^2] installer corresponding to your operating system. Accept the EULA, install in default location, and let conda modify your `.bashrc`[^3], `$PATH`[^4], and environment variables.
    ```
    wget https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-MacOSX-arm64.sh # or the equivalent installer for your OS
-   chmod +x　Miniforge3-MacOSX-arm64.sh # change permissions to runnable
+   chmod +x Miniforge3-MacOSX-arm64.sh # change permissions to runnable
    ./Miniforge3-MacOSX-arm64.sh # run
    ```
 2. Add `conda` to `$PATH`.
@@ -78,6 +78,7 @@ This tutorial was written and tested on Mac OS 13.5 and Ubuntu 16. Similar resul
 # Troubleshooting
 - [WSL2 on Windows] `CondaHTTPError: HTTP 000 CONNECTION FAILED for url <https://repo.anaconda.com/pkgs/main/linux-64/current_repodata.json>
 tl;dr close and reopen your shell.` [source](https://stackoverflow.com/questions/67923183/miniconda-on-wsl2-ubuntu-20-04-fails-with-condahttperror-http-000-connection)
+- [Mac OS on Apple silicon architecture] Many pacckages (especially bioconductor) do not yet have builds for apple silicon. If you get a `PackageNotFoundError` and you're running Apple silicon (use `conda info` to see details of your conda installation; `platform : osx-arm64` indicates Apple silicon), you can run `conda config --env --set subdir osx-64` to force conda to use the older Intel architecture.
    
 [^1]: [Mac OS] This is the Terminal app. [Windows] [Windows Subsystem for Linux (WSL)](https://learn.microsoft.com/en-us/windows/wsl/install) is your
   best friend, but mounting drives is difficult. [Linux] Bash Shell.
