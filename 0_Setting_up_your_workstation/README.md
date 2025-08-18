@@ -65,7 +65,8 @@ This tutorial was written and tested on Mac OS 13.5 and Ubuntu 16. Similar resul
    # deactivate when you're done
    conda deactivate
    ```
-   While your conda environment is active, the packages installed in that environment are added to your $PATH and available for use via Python, bash, or however you normally access them.
+   [^7]
+   While your conda environment is activated, the packages installed in that environment are added to your `$PATH` and available for use via Python, bash, or however you normally access them.
 
 8. You are now ready to use your new Python environment! Run
    ```
@@ -82,19 +83,16 @@ tl;dr close and reopen your shell.` [source](https://stackoverflow.com/questions
    
 [^1]: [Mac OS] This is the Terminal app. [Windows] [Windows Subsystem for Linux (WSL)](https://learn.microsoft.com/en-us/windows/wsl/install) is your
   best friend, but mounting drives is difficult. [Linux] Bash Shell.
-[^2]: `conda` is the package manager software itself. There are other flavors of essentially the same thing, with the following 
+[^2]: `conda` is the package manager software itself. There are various flavors of essentially the same thing, with the following 
   notable differences:
     - `anaconda` is developed by Anaconda, Inc. and comes with lots of packages preinstalled. 
-    - `miniconda` is a minimal installation of conda and includes only Python, conda, and a few other useful packages. This is my preferred option.
-    - `miniforge` is the minimal open-source installation of conda and mamba, below. 
-    - `mamba` is the open-source implementation. In the late 2010s, `conda`'s dependency solver algorithm became insufficient for the increasingly
-    complex dependency trees of modern packages, so a group of freelance developers spun off `mamba`, which uses a faster algorithm but essentially
-    the same syntax, except sometimes substituting eg. `mamba install` for `conda install`. The solving algorithm is now an option in `conda` which 
-    we will set as default in this tutorial.
-    - `micromamba` is the minimal installation of `mamba`.
-[^3]: `.bashrc`, `.bash_profile` etc. are scripts that are run whenever you open a command prompt.[^7] 
+    - `miniconda` is a minimal installation of anaconda and includes only Python, conda, and a few other useful packages.
+    - `miniforge` is the minimal open-source installation of conda. 
+[^3]: `.bashrc`, `.bash_profile` etc. are scripts that are run whenever you open a command prompt.[^8] 
 [^4]: `$PATH` is where the OS looks for executable commands, so that when you type "conda init", the system knows to run the `conda` command with the 
   `init` parameter.
-[^5]: `# N.B. that comments in many programming languages are denoted by '#' and everything to the right is not part of the command.`
+[^5]: `# N.B. that comments in many programming languages (including python, bash and R) are denoted by '#' and everything to the right is not part of the command.`
 [^6]: The Jupyter project also includes the relatively nascent programming language Julia, hence the name "ju-pyt-r".
-[^7]: `.zshrc` and `.zsh_profile` on Mac OS.
+[^7]: To keep a record of my environment, and to quickly install it anywhere, I often install from a file instead of from the command line. The conda command for this is `conda env create -f environment.yml`.
+[^8]: `.zshrc` and `.zsh_profile` on Mac OS.
+
