@@ -1,6 +1,6 @@
 # Session 0 - Setting up your workstation with `conda`
 
-Updated 2024-05-15
+Updated 2025-08-18
 
 ## Goal
 To do bioinformatics, you need to be able to run existing software written and distributed by someone else, called *packages*. Those packages in turn 
@@ -10,7 +10,7 @@ manager.
 
 ## Dependencies
 
-This tutorial was written and tested on Mac OS 13.5 and Ubuntu 16. Similar results can be achieved using WSL (Windows). 
+This tutorial was written and tested on Mac OS 13.5 and Ubuntu 16. Similar results can be achieved using WSL2 (Windows). 
 
 ## Tutorial
 0. Open a command line prompt.[^1] 
@@ -66,6 +66,7 @@ This tutorial was written and tested on Mac OS 13.5 and Ubuntu 16. Similar resul
    conda deactivate
    ```
    [^7]
+   
    While your conda environment is activated, the packages installed in that environment are added to your `$PATH` and available for use via Python, bash, or however you normally access them.
 
 8. You are now ready to use your new Python environment! Run
@@ -95,5 +96,6 @@ tl;dr close and reopen your shell.` [source](https://stackoverflow.com/questions
 [^6]: The Jupyter project also includes the relatively nascent programming language Julia, hence the name "ju-pyt-r".
 [^7]: To keep a record of my environment, and to quickly install it anywhere, I often install from a file instead of from the command line. The conda command for this is `conda env create -f environment.yml`.
 [^8]: `.zshrc` and `.zsh_profile` on Mac OS.
+
 
 
