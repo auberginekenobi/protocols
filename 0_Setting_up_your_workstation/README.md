@@ -80,7 +80,7 @@ This tutorial was written and tested on Mac OS 13.5 and Ubuntu 16. Similar resul
 # Troubleshooting
 - [WSL2 on Windows] `CondaHTTPError: HTTP 000 CONNECTION FAILED for url <https://repo.anaconda.com/pkgs/main/linux-64/current_repodata.json>
 tl;dr close and reopen your shell.` [source](https://stackoverflow.com/questions/67923183/miniconda-on-wsl2-ubuntu-20-04-fails-with-condahttperror-http-000-connection)
-- [Mac OS on Apple silicon architecture] Many pacckages (especially bioconductor) do not yet have builds for apple silicon. If you get a `PackageNotFoundError` and you're running Apple silicon (use `conda info` to see details of your conda installation; `platform : osx-arm64` indicates Apple silicon), you can run `conda config --env --set subdir osx-64` to force conda to use the older Intel architecture. [source](https://stackoverflow.com/questions/65415996/how-to-specify-the-architecture-or-platform-for-a-new-conda-environment-apple)
+- [Mac OS on Apple silicon architecture] Many packages (especially bioconductor) do not yet have builds for apple silicon. If you get a `PackageNotFoundError` and you're running Apple silicon (use `conda info` to see details of your conda installation; `platform : osx-arm64` indicates Apple silicon), you can run `conda config --env --set subdir osx-64` to force conda to use the older Intel architecture. [source](https://stackoverflow.com/questions/65415996/how-to-specify-the-architecture-or-platform-for-a-new-conda-environment-apple)
    
 [^1]: [Mac OS] This is the Terminal app. [Windows] [Windows Subsystem for Linux (WSL)](https://learn.microsoft.com/en-us/windows/wsl/install) is your
   best friend, but mounting drives is difficult. [Linux] Bash Shell.
@@ -96,6 +96,7 @@ tl;dr close and reopen your shell.` [source](https://stackoverflow.com/questions
 [^6]: The Jupyter project also includes the relatively nascent programming language Julia, hence the name "ju-pyt-r".
 [^7]: To keep a record of my environment, and to quickly install it anywhere, I often install from a file instead of from the command line. The conda command for this is `conda env create -f environment.yml`.
 [^8]: `.zshrc` and `.zsh_profile` on Mac OS.
+
 
 
 
