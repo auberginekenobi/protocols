@@ -10,10 +10,10 @@ This tutorial assumes no formal programming or computer science background, but 
 Materials are Jupyter notebooks. For instructions on how to install Jupyter, Python, and the required software packages, see [Tutorial 0](/0_Setting_up_your_workstation/README.md).
 
 ### Contents
-**1.0 Python as a calculator** introduces numerical data types, variables, errors, functions, the `list` data structure, and the `math` and `scipy` software packages for statistics. By the end of this tutorial you should be able to run a statistical test using Python.  
-**1.1 Text manipulation** introduces the `str` data type for text, iteration (`for` loops), and creating a function. By the end, you will have programmed a solution to the reverse complement problem below.  
-**1.2 Control flow** introduces logic, the `bool` data type, `if` statements, and testing. By the end, you will write your own tests to verify that your reverse complement solution is correct.
-**1.3 Sets and tables** introduces sets, file input/output, the `pandas` package for data tables, and multiple hypothesis testing. By the end, you will be able to run many statistical tests and interpret them correctly.
+**Tutorial 1.0 Python as a calculator** introduces numerical data types, variables, errors, functions, the `list` data structure, and the `math` and `scipy` software packages for statistics. By the end of this tutorial you should be able to run a statistical test using Python.  
+**Tutorial 1.1 Text manipulation** introduces the `str` data type for text, iteration (`for` loops), and creating a function. By the end, you will have programmed a solution to the reverse complement problem below.  
+**Tutorial 1.2 Control flow** introduces logic, the `bool` data type, `if` statements, and testing. By the end, you will write your own tests to verify that your reverse complement solution is correct.  
+**Tutorial 1.3 Sets and tables** introduces sets, file input/output, the `pandas` package for data tables, and multiple hypothesis testing. By the end, you will be able to run many statistical tests and interpret them correctly.
 
 ## The reverse complement problem
 **Definition**. Consider the DNA sequence
@@ -80,7 +80,7 @@ Next, consider what would be the outcome if we did RNA-seq on biological replica
 
 There are 2 accepted ways to resolve this issue. One is not to perform 20,000 tests. If we know beforehand that we're only interested in 1 gene, then it's acceptable to design your experiment to examine the one gene (probably not using RNA-seq) so as not to test the other 19,999[^5]. 
 
-The other way is to adjust the $p<0.05$ (usually reported as "adjusted *p*" or *q*-value) threshold to limit the number of expected false positive results. For example, in our RNA-seq experiment above, we could set a stricter $p=0.05/20,000=2.5e-6$ threshold, so that the cumulative chance of a false positive across *any* of our 20,000 hypotheses is 5%. This is known as *Bonferroni correction*. Another is to set a *q*-value such that no more than *q* of results are expected to be false positives; ie., a threshold of $q<0.1$ indicates that 10% of results would be expected to be false positive. The mathematics of how to do this are beyond scope, but the standard method is *Benjamini-Hochberg FDR correction*. BH correction is standard for differential analysis of RNA-seq and will be used when we test multiple hypotheses in Tutorial 1.3. 
+The other way is to adjust the $p<0.05$ (usually reported as "adjusted *p*" or *q*-value) threshold to limit the number of expected false positive results. For example, in our RNA-seq experiment above, we could set a stricter $p=\frac{0.05}{20,000}=2.5 \times 10^{-6}$ threshold, so that the cumulative chance of a false positive across *any* of our 20,000 hypotheses is 5%. This is known as *Bonferroni correction*. Another is to set a *q*-value such that no more than *q* of results are expected to be false positives; ie., a threshold of $q<0.1$ indicates that 10% of results would be expected to be false positive. The mathematics of how to do this are beyond scope, but the standard method is *Benjamini-Hochberg FDR correction*. BH correction is standard for differential analysis of RNA-seq and will be used when we test multiple hypotheses in Tutorial 1.3. 
 
 [^1]: A good rule of thumb in software is never to reinvent a solution that already exists[^2]. Using someone else's software is usually easier than writing your own, and it makes your analysis more reproducible. See also [https://xkcd.com/927/].
 [^2]: (unless the extant solution is incorrect, not properly maintained, costs money, or implementing a new solution is a graduation requirement)
