@@ -28,7 +28,7 @@ Think for a minute on how you would do that. If it were just 1 or 2 sequences, y
 
 *Reverse complement problem:*  
 *Given a DNA sequence x, what is its reverse complement DNA sequence y?*  
-Specifying "DNA sequence" avoids the ambiguity of a sequence having both DNA and RNA complements. We may further specify that we require the solution to be a function of the form *y=f(x)*.
+Specifying "DNA sequence" avoids the ambiguity of a sequence having both DNA and RNA complements. We may further specify that we require the solution to be a function of the form $y=f(x)$.
 
 **Solution**. Now that we have defined the problem, we can begin to implement a solution. The distinction here between problem, solution and implementation is worth noting. In the problem statement, we have mathematically defined what the inputs and outputs of our function should be, all without writing any code.  We could even specify a *solution*, sometimes called *pseudocode*, defining the specific steps required to solve the problem, *still without writing any code*. Finally, there is the *implementation*, using code written in a specific programming language, that actually performs the specified operation. If you're unfamiliar with a new programming language, it can help to have a clear idea of (1) what exactly your code will do and (2) how it will do that, which are largely independent from (3) the code in a specific programming language that performs the operations specified in (2). 
 
