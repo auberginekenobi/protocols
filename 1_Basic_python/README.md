@@ -7,7 +7,7 @@ This tutorial has two purposes: to teach some basic concepts in programming and 
 This tutorial assumes no formal programming or computer science background, but familiarity with molecular biology. It will be helpful but not required to have some familiarity with mathematical topics including logic, set theory, linear algebra and statistics. 
 
 ### Requirements
-Materials are Jupyter notebooks. For instructions on how to install Jupyter, Python, and the required software packages, see (Tutorial 0)[/0_Setting_up_your_workstation/README.md].
+Materials are Jupyter notebooks. For instructions on how to install Jupyter, Python, and the required software packages, see [Tutorial 0](/0_Setting_up_your_workstation/README.md).
 
 ### Contents
 **1.0 Python as a calculator** introduces numerical data types, variables, errors, functions, the `list` data structure, and the `math` and `scipy` software packages for statistics. By the end of this tutorial you should be able to run a statistical test using Python.  
@@ -82,8 +82,8 @@ There are 2 accepted ways to resolve this issue. One is not to perform 20,000 te
 
 The other way is to adjust the *p*<0.05 (usually reported as "adjusted *p*" or *q*-value) threshold to limit the number of expected false positive results. For example, in our RNA-seq experiment above, we could set a stricter *p*=0.05/20,000=2.5e-6 threshold, so that the cumulative chance of a false positive across *any* of our 20,000 hypotheses is 5%. This is known as *Bonferroni correction*. Another is to set a *q*-value such that no more than *q* of results are expected to be false positives; ie., a threshold of *q*<0.1 indicates that 10% of results would be expected to be false positive. The mathematics of how to do this are beyond scope, but the standard method is *Benjamini-Hochberg FDR correction*. BH correction is standard for differential analysis of RNA-seq and will be used when we test multiple hypotheses in Tutorial 1.3. 
 
-[^1] A good rule of thumb in software is never to reinvent a solution that already exists[^2]. Using someone else's software is usually easier than writing your own, and it makes your analysis more reproducible. See also [https://xkcd.com/927/].
-[^2] (unless the extant solution is incorrect, not properly maintained, costs money, or implementing a new solution is a graduation requirement)
-
-
-[^5] However, an issue arises when 20,000 independent lab groups each examine a different gene under similar conditions. In that case, the scientific community still has to read 1,000 publications based on false positive results, even though each lab has followed standard practice using the *p*<0.05 threshold for reporting significant results. This is, in my opinion, a major cause of the current "reproducibility crisis in science". 
+[^1]: A good rule of thumb in software is never to reinvent a solution that already exists[^2]. Using someone else's software is usually easier than writing your own, and it makes your analysis more reproducible. See also [https://xkcd.com/927/].
+[^2]: (unless the extant solution is incorrect, not properly maintained, costs money, or implementing a new solution is a graduation requirement)
+[^3]: Love MI, Huber W, Anders S. Moderated estimation of fold change and dispersion for RNA-seq data with DESeq2. Genome Biol. 2014;15(12):550. doi:10.1186/s13059-014-0550-8. [user guide](https://bioconductor.org/packages/devel/bioc/vignettes/DESeq2/inst/doc/DESeq2.html)
+[^4]: edgeR 4.0: powerful differential analysis of sequencing data with expanded functionality and improved support for small counts and larger datasets | bioRxiv. Accessed October 18, 2024. https://www.biorxiv.org/content/10.1101/2024.01.21.576131v1 [user guide](https://bioconductor.org/packages/release/bioc/vignettes/edgeR/inst/doc/edgeRUsersGuide.pdf)
+[^5] However, an issue arises when 20,000 independent lab groups each examine a different gene under similar conditions. In that case, the scientific community may still have to read 1,000 publications based on false positive results, even though each lab has followed standard practice using the *p*<0.05 threshold for reporting significant results. This is, in my opinion, a major cause of the current "reproducibility crisis in science". 
