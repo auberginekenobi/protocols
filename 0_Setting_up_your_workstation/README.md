@@ -32,7 +32,7 @@ This tutorial was written and tested on Mac OS 13.5 and Ubuntu 16. Similar resul
    ```
    conda config --prepend channels r
    conda config --prepend channels bioconda
-   conda config --prepend channels conda-forge # best practice is to have this one as top priority.
+   conda config --prepend channels conda-forge
    conda config --set channel_priority strict
    ```
    [^5] 
@@ -60,7 +60,8 @@ This tutorial was written and tested on Mac OS 13.5 and Ubuntu 16. Similar resul
 
    # ipykernel gives the jupyter access to this environment and all packages installed here.
    conda install ipykernel --yes
-   python -m ipykernel install --user --name py3 --display-name "py3" # this command adds your new environment to your jupyter installation.
+   # this command adds your new environment to your jupyter installation.
+   python -m ipykernel install --user --name py3 --display-name "py3" 
 
    # deactivate when you're done
    conda deactivate
@@ -96,6 +97,7 @@ tl;dr close and reopen your shell.` [source](https://stackoverflow.com/questions
 [^6]: The Jupyter project also includes the relatively nascent programming language Julia, hence the name "ju-pyt-r".
 [^7]: To keep a record of my environment, and to quickly install it anywhere, I often install from a file instead of from the command line. The conda command for this is `conda env create -f environment.yml`.
 [^8]: `.zshrc` and `.zsh_profile` on Mac OS.
+
 
 
 
