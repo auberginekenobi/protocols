@@ -28,6 +28,17 @@ This tutorial was written and tested on Mac OS 13.5 and Ubuntu 16. Similar resul
    ```
    You may now notice that your shell prompt includes the `(base)` prefix eg. `(base) ochapman@12005L4953 %` indicating that you are now working in your
    *base* *environment*. More on that later.
+3. Install python.
+   ```
+   conda install python
+   ```
+##########################
+### Checkpoint
+You now have a minimal working installation of Python 3. In the terminal, you can enter the command `python` to begin programming in python. `Ctrl+d` to quit.  
+##########################
+
+Next, we set up *environments* and the *jupyter* notebook interface.
+
 4. Add the usual bioinformatics package repositories.
    ```
    conda config --prepend channels r
@@ -70,7 +81,7 @@ This tutorial was written and tested on Mac OS 13.5 and Ubuntu 16. Similar resul
    
    While your conda environment is activated, the packages installed in that environment are added to your `$PATH` and available for use via Python, bash, or however you normally access them.
 
-8. You are now ready to use your new Python environment! Run
+7. You are now ready to use your new Python environment! Run
    ```
    jupyter lab
    ```
