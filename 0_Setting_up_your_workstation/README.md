@@ -16,9 +16,9 @@ This tutorial was written and tested on Mac OS 13.5 and Ubuntu 16. Similar resul
 0. Open a command line prompt.[^1] 
 1. [Download](https://github.com/conda-forge/miniforge) and run the miniforge[^2] installer corresponding to your operating system. Accept the EULA, install in default location, and let conda modify your `.bashrc`[^3], `$PATH`[^4], and environment variables.
    ```
-   wget https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-MacOSX-arm64.sh # or the equivalent installer for your OS
-   chmod +x Miniforge3-MacOSX-arm64.sh # change permissions to runnable
-   ./Miniforge3-MacOSX-arm64.sh # run
+   wget "https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-$(uname)-$(uname -m).sh"
+   chmod +x Miniforge3-$(uname)-$(uname -m).sh # change permissions to runnable
+   ./Miniforge3-$(uname)-$(uname -m).sh # run
    ```
 2. Add `conda` to `$PATH`.
    ```
