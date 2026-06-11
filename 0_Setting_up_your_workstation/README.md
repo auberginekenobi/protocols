@@ -91,6 +91,9 @@ Next, we set up *environments* and the *jupyter* notebook interface.
 
 ## Uninstall
 ```
+# Remove Jupyter config etc.
+jupyter --paths | grep '^\s' | xargs -I{} rm -rf {}
+
 # Remove the root prefix
 rm -rf $(conda info --base)
 
@@ -99,6 +102,7 @@ rm ~/.condarc
 # Environment locations and system information
 rm -rf ~/.conda
 ```
+(Optional) If you added shell hooks to your `.zshrc`/`.bashrc`, you can delete those too.
 
 # Troubleshooting
 - [WSL2 on Windows] `CondaHTTPError: HTTP 000 CONNECTION FAILED for url <https://repo.anaconda.com/pkgs/main/linux-64/current_repodata.json>
