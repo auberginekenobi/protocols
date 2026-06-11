@@ -1,6 +1,6 @@
 # Session 0 - Setting up your workstation with `conda`
 
-Updated 2025-08-18
+Updated 2026-06-11
 
 ## Goal
 To do bioinformatics, you need to be able to run existing software written and distributed by someone else, called *packages*. Those packages in turn 
@@ -88,6 +88,17 @@ Next, we set up *environments* and the *jupyter* notebook interface.
    If the installation was successful, this command will open a web browser with the `jupyter lab` interface. If you're new to jupyter, follow the
    guided tour. Stay tuned for more tutorials.
    ![jupyter](../docs/0-jupyter-landing.png)
+
+## Uninstall
+```
+# Remove the root prefix
+rm -rf $(conda info --base)
+
+# Configuration file, common between conda installations
+rm ~/.condarc
+# Environment locations and system information
+rm -rf ~/.conda
+```
 
 # Troubleshooting
 - [WSL2 on Windows] `CondaHTTPError: HTTP 000 CONNECTION FAILED for url <https://repo.anaconda.com/pkgs/main/linux-64/current_repodata.json>
