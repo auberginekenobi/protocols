@@ -74,6 +74,10 @@ bash install.sh --apple-silicon
 ```
 
 Once the script finishes, move on to lesson 2.1.
+
+## 2.1 Differential expression
+
+The notes and explanations for this exercise are included in the lesson notebook. Run
 ```
 jupyter lab
 ```
