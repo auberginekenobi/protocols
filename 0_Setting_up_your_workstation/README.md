@@ -1,5 +1,7 @@
 # Session 0 - Setting up your workstation with `conda`
 
+[English](README.md) | [日本語](README.jp.md)
+
 Updated 2026-06-11
 
 ## Goal
