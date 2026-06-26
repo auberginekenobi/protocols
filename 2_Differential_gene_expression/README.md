@@ -33,33 +33,29 @@ connect it to Jupyter. Bash scripts (ending in `.sh`) are written in the `bash`
 lanugage[^1] used by your terminal. Many, including this one, come with a 'help'
 message to explain how to use the script.
 
-In the terminal, run `bash install.sh --help` to see the help message.
+In the terminal, run 
+```bash install.sh --help``` 
+to see the help message.
 
 Next, let's tale a look at the contents of the `install.sh` script. Open `install.sh`
 in your favorite text editor. `bash` isn't the easiest language to read, but here's a
-high-level explanation of what the script is doing:
+high-level explanation of what the script is doing. **Don't run the code below**; it's just an explanation.
 
-1. **Create the environment from the file.**
-   ```
-   conda env create -f differential-expression.yml
-   ```
+1. _Create the environment from the file_:  
+   `# conda env create -f differential-expression.yml`  
    This reads the `.yml` file and installs everything listed in it into a new
    environment named `differential-expression`.
 
-2. **(Apple silicon only) Use Intel packages.** Many Bioconductor packages have
+2. _(Apple silicon only) Use Intel packages._ Many Bioconductor packages have
    no native build for Apple silicon, so we install the Intel (`osx-64`) versions
    instead, which run fine under emulation. The `--apple-silicon` flag builds the
    environment with `CONDA_SUBDIR=osx-64` and then pins it so future installs use
-   `osx-64` too:
-   ```
-   conda run -n differential-expression conda config --env --set subdir osx-64
-   ```
+   `osx-64` too:  
+   `# conda run -n differential-expression conda config --env --set subdir osx-64`
 
-3. **Link the environment to Jupyter.** This registers the environment's R
-   interpreter as a Jupyter kernel, so you can select it when you open a notebook:
-   ```
-   conda run -n differential-expression Rscript -e "IRkernel::installspec(name = 'differential-expression', displayname = 'differential-expression')"
-   ```
+3. _Link the environment to Jupyter._ This registers the environment's R
+   interpreter as a Jupyter kernel, so you can select it when you open a notebook:  
+   `# conda run -n differential-expression Rscript -e "IRkernel::installspec(name = 'differential-expression', displayname = 'differential-expression')"`
 
 ### 2.0.3 Run the install script
 Now that you understand what the `install.sh` script is doing, let's run it.
@@ -81,7 +77,7 @@ The notes and explanations for this exercise are included in the lesson notebook
 ```
 jupyter lab
 ```
-Open [`2-1_differential-expression.ipynb`](2-1_differential-expression.ipynb) and
+and open [`2-1_differential-expression.ipynb`](2-1_differential-expression.ipynb) and
 select the `differential-expression` kernel to get started.
 
 [^1]: Mac OS uses a variant of `bash` called `zsh`. Some commands are different but it's mostly the same.
