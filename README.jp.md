@@ -18,6 +18,7 @@
 |---|----------|-------------------|
 | 0 | [ワークステーションの構築](0_Setting_up_your_workstation/README.md) | `conda` パッケージマネージャのインストール、Python 環境の作成、Jupyter ノートブックインターフェースの起動。 |
 | 1 | [Python の基礎](1_Basic_python/README.md) | Python 3 における基本的なプログラミング概念。データ型、変数、関数、反復、論理、テスト。 |
+| 2 | [遺伝子発現差解析](2_Differential_gene_expression/README.md) | 処理群と対照群を比較する RNA-seq 実験で、発現が上昇または低下した遺伝子を特定する。 |
 
 チュートリアルは今後も追加予定です。
 
