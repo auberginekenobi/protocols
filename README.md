@@ -18,6 +18,7 @@ explains the concepts and accompanying exercises.
 |---|----------|-------------------|
 | 0 | [Setting up your workstation](0_Setting_up_your_workstation/README.md) | Install the `conda` package manager, create Python environments, and launch the Jupyter notebook interface. |
 | 1 | [Python basics](1_Basic_python/README.md) | Core programming concepts in Python 3: data types, variables, functions, iteration, logic, and testing. |
+| 2 | [Differential gene expression](2_Differential_gene_expression/README.md) | Identify genes up- or down-regulated in a treatment vs. control RNA-seq experiment. |
 
 More tutorials are on the way.
 
