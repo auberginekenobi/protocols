@@ -1,6 +1,6 @@
 # Bioinformatics protocols
 
-[English](README.md) | [日本語](README.jp.md)
+English | [日本語](README.jp.md)
 
 Hands-on tutorials for common bioinformatics tasks. 
 These tutorials assume **no formal programming or computer science background**,

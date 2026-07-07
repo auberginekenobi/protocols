@@ -1,6 +1,6 @@
 # バイオインフォマティクス・プロトコル集
 
-[English](README.md) | [日本語](README.jp.md)
+[English](README.md) | 日本語
 
 > この文書は AI（Claude Opus 4.8）によって `README.md` から翻訳されました。正式な原文は英語版です。誤りや不自然な表現に気づいた場合は、英語版を参照してください。
 

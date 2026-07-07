@@ -1,6 +1,6 @@
 # Session 2 - Differential gene expression
 
-[English](README.md) | [日本語](README.jp.md)
+English | [日本語](README.jp.md)
 
 Updated 2026-06-19
 

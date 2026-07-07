@@ -1,6 +1,6 @@
 # Python basics tutorial
 
-[English](README.md) | [日本語](README.jp.md)
+English | [日本語](README.jp.md)
 
 This tutorial has two purposes: to teach some basic concepts in programming and programming languages, and to show how they are implemented in the Python 3 language. To do so, we will consider a couple of common use cases one might encounter as a scientist:  
 - **Running someone else's protocol**. In this situation, there is an accepted solution to your problem and high-quality software to solve the problem already exists. As an example, we will consider the *differential expression problem* use Python to run t-tests on 5 replicates each of experimental and control data.

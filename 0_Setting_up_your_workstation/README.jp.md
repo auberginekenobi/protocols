@@ -1,6 +1,6 @@
 # Session 0 - `conda` でワークステーションを構築する
 
-[English](README.md) | [日本語](README.jp.md)
+[English](README.md) | 日本語
 
 更新日 2026-06-11
 
